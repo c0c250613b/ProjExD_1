@@ -25,6 +25,7 @@ def main():
         screen.blit(bg_img, [-x, 0])
         screen.blit(bg_img_hantenn, [-x+1600, 0]) #練習7
         screen.blit(bg_img, [-x+3200, 0]) #練習9
+        kk_rct.move_ip((-1, 0))
         key_lst = pg.key.get_pressed() #練習10-3
         if key_lst[pg.K_UP]: #練習10-4
             kk_rct.move_ip((0, -1))
@@ -33,7 +34,7 @@ def main():
         elif key_lst[pg.K_LEFT]:
             kk_rct.move_ip((-1, 0))
         elif key_lst[pg.K_RIGHT]:
-            kk_rct.move_ip((1, 0))
+            kk_rct.move_ip((2, 0))
         screen.blit(kk_img, kk_rct) #練習10-5
         pg.display.update()
         tmr += 1        
